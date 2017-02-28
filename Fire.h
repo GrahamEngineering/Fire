@@ -12,12 +12,14 @@ class Fire
   public:
     Fire();
 	Fire(int);	// Timer with set milliseconds
+	void setCallback(void (*callback_function) () );
 	bool fire();
 	int lastFireTime;
 	
   private:
 	int _fireInterval = 1000;	// 1 second by default.
-	
+	void (*_callback)();
+	bool _isCallbackEnabled = false;
 };
 
 

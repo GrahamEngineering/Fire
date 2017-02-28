@@ -14,9 +14,15 @@ Fire::Fire(int fireInterval)
 
 bool Fire::fire()
 {
-	if (millis() - lastFireTime > _fireInterval)
+	if (millis() - lastFireTime >= _fireInterval)
 	{
+		if (_isCallbackEnabled)
+		{
+			_callback();
+		}
+		
 		lastFireTime = millis();
+
 		return true;
 	}
 	else
@@ -24,3 +30,13 @@ bool Fire::fire()
 		return false;
 	}
 }
+
+void Fire::setCallback(void (*callback_function)())
+{
+	/*
+		Set the callback to be triggered later.
+	*/
+	_callback = callback_function;
+	_isCallbackEnabled = true;
+}
+
