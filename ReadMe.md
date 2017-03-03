@@ -1,4 +1,4 @@
-# Fire
+# Graham Engineering - Fire
 
 A simple Arduino/ESP8266/NodeMCU timer trigger
 
