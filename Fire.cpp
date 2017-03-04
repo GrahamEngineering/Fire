@@ -40,3 +40,9 @@ void Fire::setCallback(void (*callback_function)())
 	_isCallbackEnabled = true;
 }
 
+
+bool Fire::updateInterval(int newInterval)
+{
+	_fireInterval = newInterval;
+	return true;
+}
