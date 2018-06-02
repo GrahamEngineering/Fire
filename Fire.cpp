@@ -6,7 +6,7 @@ Fire::Fire()
 	lastFireTime = millis();
 }
 
-Fire::Fire(int fireInterval)
+Fire::Fire(unsigned long fireInterval)
 {
 	_fireInterval = fireInterval;
 	lastFireTime = millis();
