@@ -31,6 +31,11 @@ bool Fire::fire()
 	}
 }
 
+bool Fire::fireExpired()
+{
+	return (millis() - lastFireTime >= _fireInterval);
+}
+
 void Fire::setCallback(void (*callback_function)())
 {
 	/*

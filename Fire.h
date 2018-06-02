@@ -14,7 +14,8 @@ class Fire
 	Fire(int);	// Timer with set milliseconds
 	void setCallback(void (*callback_function) () );
 	bool fire();
-	int lastFireTime;
+	bool fireExpired();
+	unsigned long lastFireTime;
 	bool updateInterval(int);
 	
   private:
